@@ -7,10 +7,17 @@ import { Box, Text, Image, Grid, GridItem } from "@chakra-ui/react";
 import { NftResponse } from "@/data/model";
 
 export const NftCollections = () => {
+  // get address and isConnected status from wagmi
   const { address, isConnected } = useAccount();
+
+  // set apiKey and baseUrl
   const apiKey = `${process.env.NEXT_PUBLIC_API_KEY}`;
   const baseURL = `https://eth-goerli.g.alchemy.com/nft/v2/${apiKey}/getNFTs/?owner=${address}`;
+
+  // create a state to house the response from alchemy api
   const [nftCollections, setNftCollections] = useState<NftResponse[]>([]);
+
+  // use alchemy api to get list of nfts connected to a connected address anytime a wallet is connected and address is added
   useEffect(() => {
     if (isConnected && address) {
       instance

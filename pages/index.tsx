@@ -8,17 +8,25 @@ import { TimeIntervals } from "@/sections/timeInterval";
 import { BtcPrices } from "@/sections/btcPrices";
 
 export default function Home() {
+  // a state to house the selected time interval
   const [timeInterval, setTimeInterval] = useState<string>("5");
+
+  // a state to house the selected currencies
   const [availableCurrencies, setAvailableCurrencies] = useState([
     "usd",
     "gbp",
     "eur",
   ]);
 
+  // a state to house the response of the btc prices
   const [fetchBtcPrices, setFetchBtcPrices] = useState<BtdPriceResponse | null>(
     null
   );
+
+  // loading state when geting prices
   const [loading, setLoading] = useState(false);
+
+  // function to make an axios request to get prices
   const getBtcPrices = () => {
     setLoading(true);
     instance
@@ -34,6 +42,7 @@ export default function Home() {
       });
   };
 
+  // get feature configuration from browser local storage and update state
   useEffect(() => {
     const savedTimeInterval = getFromLocalStorage("timeInterval");
     const savedAvailableCurrencies = getFromLocalStorage("availableCurrency");
