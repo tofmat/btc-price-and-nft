@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) app, This app contains price details of USD, GBP, and EUR currencies, refreshed at a default interval of 5 seconds. Also includes a feature to allow users to choose between different data refresh intervals and toggle on/off some of the currencies displayed. All preferred feature are stored in browser local storage, and fetched on usage
 
 ## How to start the application
 
