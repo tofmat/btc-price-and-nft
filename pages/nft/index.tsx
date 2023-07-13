@@ -27,7 +27,7 @@ export default function NftPage() {
           </Text>
           <p>
             uses testnets api at eth-goerli (please connect a test network,
-            preferably goerli )
+            preferably sepolia, goerli )
           </p>
         </Box>
         <NftCollections />

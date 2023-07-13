@@ -5,7 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { configureChains, createConfig, WagmiConfig } from "wagmi";
+import { configureChains, createConfig, sepolia, WagmiConfig } from "wagmi";
 import {
   mainnet,
   polygon,
@@ -18,7 +18,7 @@ import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient } = configureChains(
-  [mainnet, polygon, optimism, arbitrum, zora, goerli],
+  [mainnet, polygon, optimism, arbitrum, zora, goerli, sepolia],
   [
     alchemyProvider({ apiKey: `${process.env.NEXT_PUBLIC_API_KEY}` }),
     publicProvider(),
