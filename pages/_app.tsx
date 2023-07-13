@@ -19,7 +19,10 @@ import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient } = configureChains(
   [mainnet, polygon, optimism, arbitrum, zora, goerli],
-  [alchemyProvider({ apiKey: `${process.env.API_KEY}` }), publicProvider()]
+  [
+    alchemyProvider({ apiKey: `${process.env.NEXT_PUBLIC_API_KEY}` }),
+    publicProvider(),
+  ]
 );
 
 const { connectors } = getDefaultWallets({
@@ -40,12 +43,6 @@ export default function App({ Component, pageProps }: AppProps) {
       {" "}
       <Head>
         <title>Price Index and NFTS</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <ChakraProvider>
         <Layout>

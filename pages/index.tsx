@@ -1,4 +1,4 @@
-import { Stack, Box, Image } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { getFromLocalStorage } from "@/data/local-storage";
 import instance from "@/data/axios-setup";
@@ -67,6 +67,7 @@ export default function Home() {
         left="0"
         top="0"
         zIndex={"-99"}
+        alt="spiral"
       />
       <Box px={["2", "4", "8", "10"]} zIndex={"99"} position={"relative"}>
         <HeroSection />
@@ -75,6 +76,7 @@ export default function Home() {
           position={"absolute"}
           zIndex={"-99"}
           w="full"
+          alt="world"
         />
         <TimeIntervals
           setTimeInterval={setTimeInterval}

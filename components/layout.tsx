@@ -8,7 +8,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Link href="/">
           {" "}
           <div className="flex gap-2 items-center">
-            <Image src="/svg/bitcoin-svgrepo-com.svg" width={"20px"} />
+            <Image
+              src="/svg/bitcoin-svgrepo-com.svg"
+              width={"20px"}
+              alt="bitcoin"
+            />
             <p className="text-lg">Bitcoin Price Index</p>
           </div>
         </Link>

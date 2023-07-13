@@ -10,6 +10,7 @@ export default function NftPage() {
           left="0"
           top="0"
           zIndex={"-99"}
+          alt="spiral"
         />
         <Box
           px={["4", "6", "10", "14"]}

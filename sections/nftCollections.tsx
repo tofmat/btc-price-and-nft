@@ -8,7 +8,7 @@ import { NftResponse } from "@/data/model";
 
 export const NftCollections = () => {
   const { address, isConnected } = useAccount();
-  const apiKey = `${process.env.API_KEY}`;
+  const apiKey = `${process.env.NEXT_PUBLIC_API_KEY}`;
   const baseURL = `https://eth-goerli.g.alchemy.com/nft/v2/${apiKey}/getNFTs/?owner=${address}`;
   const [nftCollections, setNftCollections] = useState<NftResponse[]>([]);
   useEffect(() => {
