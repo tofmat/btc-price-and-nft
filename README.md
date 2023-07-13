@@ -21,7 +21,7 @@ npm run dev
 yarn dev
 ```
 
-On the NFT Page, Connect your wallet and use a testnet network to test.
+On the NFT Page, Connect your wallet and use a testnet to test.
 
 
 The live app can be found here, https://gregarious-biscuit-1da573.netlify.app
